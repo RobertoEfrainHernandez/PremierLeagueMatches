@@ -3,16 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		57A59B9A25C098C300BF3946 /* PremierLeagueMatchesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */; };
-		57A59B9C25C098C300BF3946 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59B9B25C098C300BF3946 /* ContentView.swift */; };
+		57A59B9C25C098C300BF3946 /* MatchDayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59B9B25C098C300BF3946 /* MatchDayListView.swift */; };
 		57A59B9E25C098C600BF3946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A59B9D25C098C600BF3946 /* Assets.xcassets */; };
 		57A59BA125C098C600BF3946 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A59BA025C098C600BF3946 /* Preview Assets.xcassets */; };
 		57A59BAC25C098C700BF3946 /* PremierLeagueMatchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BAB25C098C700BF3946 /* PremierLeagueMatchesTests.swift */; };
 		57A59BB725C098C700BF3946 /* PremierLeagueMatchesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BB625C098C700BF3946 /* PremierLeagueMatchesUITests.swift */; };
+		57A59BCB25C09AC100BF3946 /* PLTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BCA25C09AC100BF3946 /* PLTeam.swift */; };
+		57A59BD025C0A89800BF3946 /* MatchDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BCF25C0A89800BF3946 /* MatchDay.swift */; };
+		57A59BDB25C0B77900BF3946 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BDA25C0B77900BF3946 /* EndPoint.swift */; };
+		57A59BE025C0CBE400BF3946 /* PLTeamsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BDF25C0CBE400BF3946 /* PLTeamsStore.swift */; };
+		57A59BE525C0DC5A00BF3946 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */; };
+		57A59BEA25C0DCB200BF3946 /* ModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BE925C0DCB200BF3946 /* ModelLoader.swift */; };
+		57A59BEF25C0DDAF00BF3946 /* PLMatchDayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BEE25C0DDAF00BF3946 /* PLMatchDayStore.swift */; };
+		57A59C0025C0FD1B00BF3946 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 57A59BFF25C0FD1B00BF3946 /* SDWebImageSwiftUI */; };
+		57A59C0525C0FDA000BF3946 /* MatchDayListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */; };
+		57A59C0A25C0FE3F00BF3946 /* MatchDayScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */; };
+		57A59C1025C1263500BF3946 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 57A59C0F25C1263500BF3946 /* SDWebImageSVGCoder */; };
+		57A59C1525C1265400BF3946 /* SVGImageSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C1425C1265400BF3946 /* SVGImageSupport.swift */; };
+		57A59C2025C12CA000BF3946 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C1F25C12CA000BF3946 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +48,7 @@
 /* Begin PBXFileReference section */
 		57A59B9625C098C300BF3946 /* PremierLeagueMatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PremierLeagueMatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueMatchesApp.swift; sourceTree = "<group>"; };
-		57A59B9B25C098C300BF3946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		57A59B9B25C098C300BF3946 /* MatchDayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayListView.swift; sourceTree = "<group>"; };
 		57A59B9D25C098C600BF3946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A59BA025C098C600BF3946 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57A59BA225C098C600BF3946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +58,17 @@
 		57A59BB225C098C700BF3946 /* PremierLeagueMatchesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PremierLeagueMatchesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A59BB625C098C700BF3946 /* PremierLeagueMatchesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueMatchesUITests.swift; sourceTree = "<group>"; };
 		57A59BB825C098C700BF3946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57A59BCA25C09AC100BF3946 /* PLTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTeam.swift; sourceTree = "<group>"; };
+		57A59BCF25C0A89800BF3946 /* MatchDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDay.swift; sourceTree = "<group>"; };
+		57A59BDA25C0B77900BF3946 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		57A59BDF25C0CBE400BF3946 /* PLTeamsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTeamsStore.swift; sourceTree = "<group>"; };
+		57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		57A59BE925C0DCB200BF3946 /* ModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLoader.swift; sourceTree = "<group>"; };
+		57A59BEE25C0DDAF00BF3946 /* PLMatchDayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLMatchDayStore.swift; sourceTree = "<group>"; };
+		57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayListHeaderView.swift; sourceTree = "<group>"; };
+		57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayScoreView.swift; sourceTree = "<group>"; };
+		57A59C1425C1265400BF3946 /* SVGImageSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageSupport.swift; sourceTree = "<group>"; };
+		57A59C1F25C12CA000BF3946 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A59C0025C0FD1B00BF3946 /* SDWebImageSwiftUI in Frameworks */,
+				57A59C1025C1263500BF3946 /* SDWebImageSVGCoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */,
-				57A59B9B25C098C300BF3946 /* ContentView.swift */,
+				57A59C1F25C12CA000BF3946 /* Constants.swift */,
+				57A59BD425C0ACB000BF3946 /* Model */,
+				57A59BF725C0EBCA00BF3946 /* View */,
+				57A59BF325C0EBC000BF3946 /* ViewModel */,
 				57A59B9D25C098C600BF3946 /* Assets.xcassets */,
 				57A59BA225C098C600BF3946 /* Info.plist */,
 				57A59B9F25C098C600BF3946 /* Preview Content */,
@@ -130,6 +159,38 @@
 			path = PremierLeagueMatchesUITests;
 			sourceTree = "<group>";
 		};
+		57A59BD425C0ACB000BF3946 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				57A59BCA25C09AC100BF3946 /* PLTeam.swift */,
+				57A59BCF25C0A89800BF3946 /* MatchDay.swift */,
+				57A59BDA25C0B77900BF3946 /* EndPoint.swift */,
+				57A59BE925C0DCB200BF3946 /* ModelLoader.swift */,
+				57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57A59BF325C0EBC000BF3946 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				57A59BDF25C0CBE400BF3946 /* PLTeamsStore.swift */,
+				57A59BEE25C0DDAF00BF3946 /* PLMatchDayStore.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		57A59BF725C0EBCA00BF3946 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57A59B9B25C098C300BF3946 /* MatchDayListView.swift */,
+				57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */,
+				57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */,
+				57A59C1425C1265400BF3946 /* SVGImageSupport.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +207,10 @@
 			dependencies = (
 			);
 			name = PremierLeagueMatches;
+			packageProductDependencies = (
+				57A59BFF25C0FD1B00BF3946 /* SDWebImageSwiftUI */,
+				57A59C0F25C1263500BF3946 /* SDWebImageSVGCoder */,
+			);
 			productName = PremierLeagueMatches;
 			productReference = 57A59B9625C098C300BF3946 /* PremierLeagueMatches.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +282,10 @@
 				Base,
 			);
 			mainGroup = 57A59B8D25C098C300BF3946;
+			packageReferences = (
+				57A59BFE25C0FD1B00BF3946 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				57A59C0E25C1263500BF3946 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
+			);
 			productRefGroup = 57A59B9725C098C300BF3946 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +328,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A59B9C25C098C300BF3946 /* ContentView.swift in Sources */,
+				57A59C1525C1265400BF3946 /* SVGImageSupport.swift in Sources */,
+				57A59BD025C0A89800BF3946 /* MatchDay.swift in Sources */,
+				57A59BCB25C09AC100BF3946 /* PLTeam.swift in Sources */,
+				57A59C0525C0FDA000BF3946 /* MatchDayListHeaderView.swift in Sources */,
+				57A59BE525C0DC5A00BF3946 /* URLSession+Extension.swift in Sources */,
+				57A59BE025C0CBE400BF3946 /* PLTeamsStore.swift in Sources */,
+				57A59BEA25C0DCB200BF3946 /* ModelLoader.swift in Sources */,
+				57A59C2025C12CA000BF3946 /* Constants.swift in Sources */,
+				57A59BEF25C0DDAF00BF3946 /* PLMatchDayStore.swift in Sources */,
+				57A59BDB25C0B77900BF3946 /* EndPoint.swift in Sources */,
+				57A59B9C25C098C300BF3946 /* MatchDayListView.swift in Sources */,
+				57A59C0A25C0FE3F00BF3946 /* MatchDayScoreView.swift in Sources */,
 				57A59B9A25C098C300BF3946 /* PremierLeagueMatchesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +660,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		57A59BFE25C0FD1B00BF3946 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		57A59C0E25C1263500BF3946 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		57A59BFF25C0FD1B00BF3946 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57A59BFE25C0FD1B00BF3946 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		57A59C0F25C1263500BF3946 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57A59C0E25C1263500BF3946 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 57A59B8E25C098C300BF3946 /* Project object */;
 }

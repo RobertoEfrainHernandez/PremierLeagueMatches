@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PremierLeagueMatchesApp: App {
+  @ObservedObject var plTeamsStore = PLTeamsStore()
+  
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MatchDayListView()
+              .environmentObject(plTeamsStore)
         }
     }
 }
