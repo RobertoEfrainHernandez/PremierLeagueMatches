@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573AB94D25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AB94C25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift */; };
+		573AB95225C35C4000854F31 /* BlueProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AB95125C35C4000854F31 /* BlueProgressView.swift */; };
 		57A59B9A25C098C300BF3946 /* PremierLeagueMatchesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */; };
 		57A59B9C25C098C300BF3946 /* MatchDayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59B9B25C098C300BF3946 /* MatchDayListView.swift */; };
 		57A59B9E25C098C600BF3946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A59B9D25C098C600BF3946 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		573AB94C25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeoMatchDayScoreView.swift; sourceTree = "<group>"; };
+		573AB95125C35C4000854F31 /* BlueProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueProgressView.swift; sourceTree = "<group>"; };
 		57A59B9625C098C300BF3946 /* PremierLeagueMatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PremierLeagueMatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueMatchesApp.swift; sourceTree = "<group>"; };
 		57A59B9B25C098C300BF3946 /* MatchDayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayListView.swift; sourceTree = "<group>"; };
@@ -190,8 +194,10 @@
 				57A59B9B25C098C300BF3946 /* MatchDayListView.swift */,
 				57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */,
 				57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */,
+				573AB94C25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift */,
 				57F497B325C2816E00DD4246 /* MatchDayDetailView.swift */,
 				57F497B825C283C500DD4246 /* CloseButton.swift */,
+				573AB95125C35C4000854F31 /* BlueProgressView.swift */,
 				57A59C1425C1265400BF3946 /* SVGImageSupport.swift */,
 			);
 			path = View;
@@ -347,7 +353,9 @@
 				57A59BEF25C0DDAF00BF3946 /* PLMatchDayStore.swift in Sources */,
 				57A59BDB25C0B77900BF3946 /* EndPoint.swift in Sources */,
 				57A59B9C25C098C300BF3946 /* MatchDayListView.swift in Sources */,
+				573AB94D25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift in Sources */,
 				57A59C0A25C0FE3F00BF3946 /* MatchDayScoreView.swift in Sources */,
+				573AB95225C35C4000854F31 /* BlueProgressView.swift in Sources */,
 				57A59B9A25C098C300BF3946 /* PremierLeagueMatchesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

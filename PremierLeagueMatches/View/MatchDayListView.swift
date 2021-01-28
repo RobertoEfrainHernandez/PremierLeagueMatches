@@ -24,21 +24,12 @@ struct MatchDayListView: View {
         ScrollView {
           VStack(alignment: .center, spacing: 24) {
             if plMatchDayStore.loading {
-              ProgressView()
-                .progressViewStyle(BlueShadowProgressViewStyle())
-                .progressViewStyle(CircularProgressViewStyle(tint: colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue))
-                .scaleEffect(1.8, anchor: .center)
+              BlueProgressView()
                 .offset(y: 100)
             } else {
               ForEach(plMatchDayStore.matches) { match in
                 VStack {
-                  MatchDayScoreView(match: match)
-                    .matchedGeometryEffect(id: match.id, in: namespace, isSource: !show)
-                    .offset(y: 0)
-                    .frame(width: 335, height: 200)
-                    .background(colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue)
-                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 5)
+                  MatchedGeoMatchDayScoreView(show: $show, match: match, namespace: namespace)
                     .onTapGesture {
                       withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
                         show.toggle()
@@ -76,16 +67,6 @@ struct MatchDayListView: View {
       }
     }
     .edgesIgnoringSafeArea(.bottom)
-  }
-}
-
-struct BlueShadowProgressViewStyle: ProgressViewStyle {
-  @Environment(\.colorScheme) var colorScheme
-  
-  func makeBody(configuration: Configuration) -> some View {
-    ProgressView(configuration)
-      .shadow(color: colorScheme == .dark ? Constants.darkModeBlue.opacity(0.3) : Constants.lightModeBlue.opacity(0.3),
-              radius: 4.0, x: 1.0, y: 2.0)
   }
 }
 
