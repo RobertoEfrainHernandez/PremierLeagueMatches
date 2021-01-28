@@ -26,6 +26,8 @@
 		57A59C1025C1263500BF3946 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 57A59C0F25C1263500BF3946 /* SDWebImageSVGCoder */; };
 		57A59C1525C1265400BF3946 /* SVGImageSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C1425C1265400BF3946 /* SVGImageSupport.swift */; };
 		57A59C2025C12CA000BF3946 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C1F25C12CA000BF3946 /* Constants.swift */; };
+		57F497B425C2816E00DD4246 /* MatchDayDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F497B325C2816E00DD4246 /* MatchDayDetailView.swift */; };
+		57F497B925C283C500DD4246 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F497B825C283C500DD4246 /* CloseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayScoreView.swift; sourceTree = "<group>"; };
 		57A59C1425C1265400BF3946 /* SVGImageSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageSupport.swift; sourceTree = "<group>"; };
 		57A59C1F25C12CA000BF3946 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		57F497B325C2816E00DD4246 /* MatchDayDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayDetailView.swift; sourceTree = "<group>"; };
+		57F497B825C283C500DD4246 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,8 @@
 				57A59B9B25C098C300BF3946 /* MatchDayListView.swift */,
 				57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */,
 				57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */,
+				57F497B325C2816E00DD4246 /* MatchDayDetailView.swift */,
+				57F497B825C283C500DD4246 /* CloseButton.swift */,
 				57A59C1425C1265400BF3946 /* SVGImageSupport.swift */,
 			);
 			path = View;
@@ -328,10 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F497B925C283C500DD4246 /* CloseButton.swift in Sources */,
 				57A59C1525C1265400BF3946 /* SVGImageSupport.swift in Sources */,
 				57A59BD025C0A89800BF3946 /* MatchDay.swift in Sources */,
 				57A59BCB25C09AC100BF3946 /* PLTeam.swift in Sources */,
 				57A59C0525C0FDA000BF3946 /* MatchDayListHeaderView.swift in Sources */,
+				57F497B425C2816E00DD4246 /* MatchDayDetailView.swift in Sources */,
 				57A59BE525C0DC5A00BF3946 /* URLSession+Extension.swift in Sources */,
 				57A59BE025C0CBE400BF3946 /* PLTeamsStore.swift in Sources */,
 				57A59BEA25C0DCB200BF3946 /* ModelLoader.swift in Sources */,

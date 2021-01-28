@@ -19,6 +19,7 @@ struct MatchDayListHeaderView: View {
   @State private var numbers = (1...38).map { NumberModel(id: $0) }
   @State private var currSelectedIndex = 0
   
+  
   var body: some View {
     VStack {
       HStack {
@@ -40,9 +41,12 @@ struct MatchDayListHeaderView: View {
                 RoundedRectangle(cornerRadius: 18)
                   .stroke(Color.primary, lineWidth: 4)
               )
-              .background(numbers[index].isSelected ? (colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue) : Color.clear)
+              .background(numbers[index].isSelected ? Color(.systemGray) : Color.clear)
               .cornerRadius(18)
               .onTapGesture {
+                /*
+                 Conditional for handling the selection of a Match Day and having the UI update and reflect those changes
+                 */
                 if !numbers[index].isSelected {
                   numbers[currSelectedIndex].isSelected = false
                   currSelectedIndex = index

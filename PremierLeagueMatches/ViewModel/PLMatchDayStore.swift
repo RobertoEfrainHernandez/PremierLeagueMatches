@@ -11,6 +11,7 @@ import Combine
 
 class PLMatchDayStore: ObservableObject {
   @Published var matches = [MatchDay.Match]()
+  @Published var loading = false
   private var cancellables = Set<AnyCancellable>()
   private let modelLoader: ModelLoader<MatchDay>
   private var matchDayCache = [String: MatchDay]()
@@ -28,10 +29,13 @@ class PLMatchDayStore: ObservableObject {
       .store(in: &cancellables)
   }
   
+  /// This function calls the loadModel method from the ModelLoader struct to load all premier league matches on a particular match day number
+  /// - Parameter matchDayNumber: Match Day Number
   func loadMatches(basedOn matchDayNumber: Int) {
     if let matchDayMatches = matchDayCache["\(matchDayNumber)"]?.matches {
       matches = matchDayMatches
     } else {
+      loading = true
       modelLoader
         .loadModel(with: EndPoint.plMatches(withMatchDayID: matchDayNumber).urlRequest)
         .sink(receiveCompletion: { completion in
@@ -42,6 +46,7 @@ class PLMatchDayStore: ObservableObject {
         }, receiveValue: { [self] matchDay in
           matchDayCache.updateValue(matchDay, forKey: "\(matchDayNumber)")
           matches = matchDayCache["\(matchDayNumber)"]!.matches
+          loading = false
         })
         .store(in: &cancellables)
     }

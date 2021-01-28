@@ -46,31 +46,3 @@ struct MatchDay: Decodable {
     }
   }
 }
-
-//struct Filter: Decodable {
-//  var matchday: String
-//}
-
-//struct Match: Identifiable, Decodable {
-//  let id: Int
-//  let status: String
-//  let score: MatchDayScore
-//  let homeTeam: MatchDayTeam
-//  let awayTeam: MatchDayTeam
-//}
-
-//struct MatchDayScore: Decodable {
-//  let winner: String
-//  let fullTime: MatchDayGameScore
-//  let halfTime: MatchDayGameScore
-//}
-
-//struct MatchDayGameScore: Decodable {
-//  let homeTeam, awayTeam: Int
-//}
-
-//struct MatchDayTeam: Decodable {
-//  let id: Int
-//  let name: String
-//}
-

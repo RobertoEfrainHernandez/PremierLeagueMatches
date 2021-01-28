@@ -29,7 +29,6 @@ extension EndPoint {
     var request = URLRequest(url: url)
     request.addValue("application/json", forHTTPHeaderField:"Content-Type")
     request.addValue(Constants.apiKey, forHTTPHeaderField: "X-Auth-Token")
-    
     return request
   }
 }

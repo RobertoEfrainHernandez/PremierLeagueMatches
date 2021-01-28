@@ -38,6 +38,7 @@ struct TeamCrestView: View {
   
   var body: some View {
     VStack(alignment: .center, spacing: 8) {
+      //SDWebImageSwiftUI doesn't support SVG that is why the images are not displaying
       WebImage(url: URL(string: team.crestUrl))
         .resizable()
         .renderingMode(.original)
