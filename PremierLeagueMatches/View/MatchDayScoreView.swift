@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 
 struct MatchDayScoreView: View {
@@ -15,15 +14,17 @@ struct MatchDayScoreView: View {
   
   var body: some View {
     let (homeTeam, awayTeam) = plTeamsStore.getHomeAwayTeamPair(with: "\(match.homeTeam.id)", and: "\(match.awayTeam.id)")
-    let (homeScore, awayScore) = plTeamsStore.getFinalScore(with: match.score.fullTime)
+    let score = plTeamsStore.getFinalScore(with: match)
     
     return HStack(alignment: .center) {
       TeamCrestView(team: homeTeam)
       Spacer()
-      Text("\(homeScore ?? 0) - \(awayScore ?? 0)")
+      
+      Text(score)
         .font(.title2)
         .bold()
         .foregroundColor(.white)
+      
       Spacer()
       TeamCrestView(team: awayTeam)
     }
@@ -32,37 +33,19 @@ struct MatchDayScoreView: View {
 }
 
 struct TeamCrestView: View {
-  
   let team: PLTeams.PLTeam
-  let size: CGFloat = 75
   
   var body: some View {
     VStack(alignment: .center, spacing: 8) {
-      //SDWebImageSwiftUI doesn't support SVG that is why the images are not displaying
-      WebImage(url: URL(string: team.crestUrl))
-        .resizable()
-        .renderingMode(.original)
-        .placeholder {
-          Circle()
-            .foregroundColor(Color(.systemGray3).opacity(0.7))
-            .overlay(
-              Image(systemName: "photo")
-                .renderingMode(.original)
-                .font(.system(size: size / 3, weight: .regular, design: .rounded))
-                .foregroundColor(.white)
-          )
-      }
-      .scaledToFill()
-      .frame(width: size, height: size)
-      .clipShape(Circle())
-      .overlay(Circle().stroke(Color.white, lineWidth: 0.5))
-      .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 5)
+      SVGImage(url: URL(string: team.crestUrl)!)
+        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 5)
       
       Text(team.shortName)
+        .lineLimit(1)
         .font(.subheadline)
         .foregroundColor(.white)
     }
     .frame(maxWidth: 100, maxHeight: 100)
-
+    
   }
 }

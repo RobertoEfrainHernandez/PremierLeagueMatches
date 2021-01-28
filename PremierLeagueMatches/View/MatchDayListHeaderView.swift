@@ -32,7 +32,7 @@ struct MatchDayListHeaderView: View {
       .padding([.horizontal, .top])
       
       ScrollView(.horizontal) {
-        HStack(alignment: .center, spacing: 16) {
+        LazyHStack(alignment: .center, spacing: 16) {
           ForEach(numbers.indices) { index in
             Text("\(numbers[index].id)")
               .font(.subheadline)
@@ -56,7 +56,8 @@ struct MatchDayListHeaderView: View {
               }
           }
         }
-        .padding()
+        .frame(maxHeight: 100)
+        .padding(.horizontal)
       }
     }
     .onAppear {

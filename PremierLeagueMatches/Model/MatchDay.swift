@@ -19,7 +19,7 @@ struct MatchDay: Decodable {
   struct Match: Identifiable, Decodable {
     let id: Int
     let season: Season
-    let status: String
+    let status: MatchStatus
     let score: Score
     let matchday: Int
     let homeTeam, awayTeam: Area
@@ -45,4 +45,9 @@ struct MatchDay: Decodable {
         let name: String
     }
   }
+}
+
+enum MatchStatus: String, Decodable {
+  case finished = "FINISHED"
+  case scheduled = "SCHEDULED"
 }

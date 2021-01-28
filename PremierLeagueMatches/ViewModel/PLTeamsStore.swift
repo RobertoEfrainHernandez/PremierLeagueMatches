@@ -44,9 +44,16 @@ class PLTeamsStore: ObservableObject {
   }
   
   /// Helper Method for getting a home and an away team score to display in MatchDayScoreView
-  /// - Parameter matchDayScore: Full Time Score provided from a particular Match
-  /// - Returns: Tuple containing Home and Away team score
-  func getFinalScore(with matchDayScore: MatchDay.Match.Score.ExtraTime) -> (homeScore: Int?, awayScore: Int?) {
-    (matchDayScore.homeTeam, matchDayScore.awayTeam)
+  /// - Parameter matchDayScore: A particular Match
+  /// - Returns: String the displays teams score based on the status of a match
+  func getFinalScore(with match: MatchDay.Match) -> String {
+    switch match.status {
+      case .finished:
+        let homeScore = match.score.fullTime.homeTeam
+        let awayScore = match.score.fullTime.awayTeam
+        return "\(homeScore ?? 0) - \(awayScore ?? 0)"
+      case .scheduled:
+        return "vs."
+    }
   }
 }

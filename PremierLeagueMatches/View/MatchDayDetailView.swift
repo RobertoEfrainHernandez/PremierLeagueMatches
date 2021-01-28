@@ -26,7 +26,7 @@ struct MatchDayDetailView: View {
       
       //TODO:- Add UI content that displays Match Details
     }
-    .background(colorScheme == .dark ? Color.black : Color.white)
+    .background(Color(.systemBackground))
     .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .matchedGeometryEffect(id: "container\(match.id)", in: namespace)
     .edgesIgnoringSafeArea(.vertical)
