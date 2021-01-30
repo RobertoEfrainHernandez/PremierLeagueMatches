@@ -13,8 +13,10 @@ struct CloseButton: View {
       .font(.system(size: 17, weight: .bold))
       .foregroundColor(.white)
       .padding(.all, 10)
-      .background(Color(.systemGray))
+      .background(Color.black.opacity(0.8))
       .mask(Circle())
+      .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
+      .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
   }
 }
 

@@ -44,6 +44,7 @@ struct MatchDayListView: View {
             }
           }
           .frame(maxWidth: .infinity)
+          .padding(.vertical)
         }
       }
       .zIndex(1)

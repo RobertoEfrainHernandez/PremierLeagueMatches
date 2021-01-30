@@ -16,12 +16,13 @@ struct MatchDayDetailView: View {
     VStack {
       ScrollView {
         MatchDayScoreView(match: match)
-          .matchedGeometryEffect(id: match.id, in: namespace)
           .offset(y: 40)
           .frame(height: 275)
-          .background(colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue)
+          .background(blueColor)
           .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-          .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 5)
+          .shadow(color: blueColor.opacity(0.3), radius: 20, x: 0, y: 10)
+          .shadow(color: blueColor.opacity(0.2), radius: 5, x: 0, y: 2)
+          .matchedGeometryEffect(id: match.id, in: namespace)
       }
       
       //TODO:- Add UI content that displays Match Details
@@ -30,5 +31,9 @@ struct MatchDayDetailView: View {
     .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
     .matchedGeometryEffect(id: "container\(match.id)", in: namespace)
     .edgesIgnoringSafeArea(.vertical)
+  }
+  
+  private var blueColor: Color {
+    colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue
   }
 }

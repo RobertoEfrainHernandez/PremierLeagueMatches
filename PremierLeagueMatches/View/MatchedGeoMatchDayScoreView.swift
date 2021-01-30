@@ -15,11 +15,17 @@ struct MatchedGeoMatchDayScoreView: View {
   
   var body: some View {
     MatchDayScoreView(match: match)
-      .matchedGeometryEffect(id: match.id, in: namespace, isSource: !show)
+      
       .offset(y: 0)
       .frame(width: 335, height: 200)
-      .background(colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue)
+      .background(blueColor)
       .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-      .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 5)
+      .shadow(color: blueColor.opacity(0.3), radius: 20, x: 0, y: 10)
+      .shadow(color: blueColor.opacity(0.2), radius: 5, x: 0, y: 2)
+      .matchedGeometryEffect(id: match.id, in: namespace, isSource: !show)
+  }
+  
+  private var blueColor: Color {
+    colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue
   }
 }
