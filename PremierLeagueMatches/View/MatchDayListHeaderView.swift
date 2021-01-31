@@ -21,8 +21,7 @@ struct MatchDayListHeaderView: View {
         Text("Premier League Match Day \(currSelectedIndex + 1)")
           .font(.largeTitle)
           .fontWeight(.semibold)
-          .shadow(color: Color.primary.opacity(0.3), radius: 10, x: 0, y: 5)
-          .shadow(color: Color.primary.opacity(0.2), radius: 5, x: 0, y: 2)
+          .customShadow(Color.primary)
           .multilineTextAlignment(.leading)
         Spacer()
       }

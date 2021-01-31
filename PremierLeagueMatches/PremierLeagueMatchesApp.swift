@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct PremierLeagueMatchesApp: App {
-  @ObservedObject var plTeamsStore = PLTeamsStore()
+  @ObservedObject var plTeamsVM = PLTeamsViewModel()
   
-    var body: some Scene {
-        WindowGroup {
-            MatchDayListView()
-              .environmentObject(plTeamsStore)
-        }
+  var body: some Scene {
+    WindowGroup {
+      MatchDayListView()
+        .environmentObject(plTeamsVM)
     }
+  }
 }

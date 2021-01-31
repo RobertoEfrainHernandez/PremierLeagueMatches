@@ -9,14 +9,14 @@ import SwiftUI
 
 
 struct MatchDayScoreView: View {
-  @EnvironmentObject var plTeamsStore: PLTeamsStore
+  @EnvironmentObject var plTeamsVM: PLTeamsViewModel
   let match: MatchDay.Match
   
   var body: some View {
-    let (homeTeam, awayTeam) = plTeamsStore.getHomeAwayTeamPair(with: "\(match.homeTeam.id)", and: "\(match.awayTeam.id)")
-    let score = plTeamsStore.getFinalScore(with: match)
+    let (homeTeam, awayTeam) = plTeamsVM.getHomeAwayTeamPair(with: "\(match.homeTeam.id)", and: "\(match.awayTeam.id)")
+    let score = plTeamsVM.getFinalScore(with: match)
     
-    return VStack(alignment: .center, spacing: 16) {
+    return VStack(alignment: .center, spacing: 24) {
       HStack(alignment: .center) {
         TeamCrestView(team: homeTeam)
         Spacer()
@@ -33,7 +33,7 @@ struct MatchDayScoreView: View {
       }
       .padding(.horizontal)
       
-      Text("Match Date: \(match.utcDateToString())")
+      Text("Match Scheduled for: \(match.utcDateToTime())")
         .font(.caption2)
         .foregroundColor(.white)
     }
@@ -46,7 +46,7 @@ struct TeamCrestView: View {
   var body: some View {
     VStack(alignment: .center, spacing: 8) {
       SVGImage(url: URL(string: team.crestUrl)!)
-        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 5, y: 5)
+        .customShadow(Color.black)
       
       Text(team.shortName)
         .lineLimit(1)

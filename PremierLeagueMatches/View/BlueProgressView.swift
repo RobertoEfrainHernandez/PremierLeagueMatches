@@ -12,19 +12,22 @@ struct BlueProgressView: View {
   
   var body: some View {
     ProgressView()
-      .progressViewStyle(BlueShadowProgressViewStyle())
-      .progressViewStyle(CircularProgressViewStyle(tint: colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue))
+      .progressViewStyle(BlueShadowProgressViewStyle(color: blueColor))
+      .progressViewStyle(CircularProgressViewStyle(tint: blueColor))
       .scaleEffect(1.8, anchor: .center)
+  }
+  
+  private var blueColor: Color {
+    colorScheme == .dark ? Constants.darkModeBlue : Constants.lightModeBlue
   }
 }
 
 struct BlueShadowProgressViewStyle: ProgressViewStyle {
-  @Environment(\.colorScheme) var colorScheme
+  var color: Color
   
   func makeBody(configuration: Configuration) -> some View {
     ProgressView(configuration)
-      .shadow(color: colorScheme == .dark ? Constants.darkModeBlue.opacity(0.3) : Constants.lightModeBlue.opacity(0.3),
-              radius: 4.0, x: 1.0, y: 2.0)
+      .customShadow(color, r1: 8, r2: 4)
   }
 }
 

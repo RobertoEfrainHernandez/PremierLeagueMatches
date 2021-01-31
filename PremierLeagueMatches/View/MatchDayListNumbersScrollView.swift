@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MatchDayListNumbersScrollView: View {
-  @ObservedObject var plMatchDayStore: PLMatchDayStore
+  @ObservedObject var plMatchDayVM: PLMatchDayViewModel
   @State private var numbers = (1...38).map { NumberModel(id: $0) }
   @Binding var currSelectedIndex: Int
   
@@ -24,7 +24,7 @@ struct MatchDayListNumbersScrollView: View {
               numbers[currSelectedIndex].isSelected = false
               currSelectedIndex = index
               numbers[index].isSelected = true
-              plMatchDayStore.loadMatches(basedOn: numbers[index].id)
+              plMatchDayVM.loadMatches(basedOn: numbers[index].id)
             }
           }
         }

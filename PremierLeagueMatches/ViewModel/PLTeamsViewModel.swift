@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class PLTeamsStore: ObservableObject {
+class PLTeamsViewModel: ObservableObject {
   @Published private var teamsDict = [String: PLTeams.PLTeam]()
   private var cancellables = Set<AnyCancellable>()
   
@@ -26,6 +26,8 @@ class PLTeamsStore: ObservableObject {
       .store(in: &cancellables)
   }
   
+  /// Helper method for testing purposes to ensure we're recieving the PL Teams from the API
+  /// - Returns: Any array of PL Teams
   func getTeams() -> [PLTeams.PLTeam] {
     var result = [PLTeams.PLTeam]()
     for (_, v) in teamsDict {
@@ -53,12 +55,12 @@ class PLTeamsStore: ObservableObject {
         let awayScore = match.score.fullTime.awayTeam
         return "\(homeScore ?? 0) - \(awayScore ?? 0)"
       case .scheduled: return "vs."
-      case .live: return "Live Match"
-      case .inPlay: return "Match In Play"
-      case .paused: return "Match Paused"
-      case .postponed: return "Match Postponed"
-      case .suspended: return "Match Suspended"
-      case .canceled: return "Match Canceled"
+      case .live: return "Live"
+      case .inPlay: return "In Play"
+      case .paused: return "Paused"
+      case .postponed: return "Postponed"
+      case .suspended: return "Suspended"
+      case .canceled: return "Canceled"
     }
   }
 }

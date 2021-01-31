@@ -20,8 +20,7 @@ struct MatchDayDetailView: View {
           .frame(height: 275)
           .background(blueColor)
           .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-          .shadow(color: blueColor.opacity(0.3), radius: 20, x: 0, y: 10)
-          .shadow(color: blueColor.opacity(0.2), radius: 5, x: 0, y: 2)
+          .customShadow(blueColor)
           .matchedGeometryEffect(id: match.id, in: namespace)
       }
       

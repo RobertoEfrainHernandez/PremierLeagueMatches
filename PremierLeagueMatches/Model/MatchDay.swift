@@ -10,7 +10,7 @@ import SwiftUI
 struct MatchDay: Decodable {
   let count: Int
   let filters: Filters
-  let matches: [Match]
+  var matches: [Match]
 
   struct Filters: Decodable {
     var matchday: String
@@ -57,39 +57,4 @@ enum MatchStatus: String, Decodable {
   case postponed = "POSTPONED"
   case suspended = "SUSPENDED"
   case canceled = "CANCELED"
-}
-
-//MARK:- Extensions for MATCHDAY.MATCH
-
-extension MatchDay.Match {
-  func utcDateToString(_ formatter: DateFormatter = DateFormatter()) -> String {
-    formatter.locale = Locale(identifier: "en_US_POSIX")
-    let dateFormat = DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: Locale.current)!
-    let format = dateFormat.firstIndex(of: "a") == nil ? "yyyy.MM.dd' at 'HH:mm zzz" : "MMMM d, yyyy' at 'h:mm a"
-    return createDateString(from: format, with: formatter)
-  }
-  
-  func utcDateToDate(_ formatter: DateFormatter = DateFormatter()) -> Date {
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-    guard let utcConverted = formatter.date(from: utcDate) else {
-      preconditionFailure("Invalid Date from UTC Date")
-    }
-    return utcConverted
-  }
-  
-  private func createDateString(from format: String, with formatter: DateFormatter) -> String {
-    let utcConverted = utcDateToDate(formatter)
-    formatter.dateFormat = format
-    return formatter.string(from: utcConverted)
-  }
-}
-
-extension MatchDay.Match: Comparable {
-  static func < (lhs: MatchDay.Match, rhs: MatchDay.Match) -> Bool {
-    lhs.utcDateToDate() < rhs.utcDateToDate()
-  }
-  
-  static func == (lhs: MatchDay.Match, rhs: MatchDay.Match) -> Bool {
-    lhs.id == rhs.id
-  }
 }

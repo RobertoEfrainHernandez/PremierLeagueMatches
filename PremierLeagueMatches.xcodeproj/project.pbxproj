@@ -11,6 +11,12 @@
 		573AB95225C35C4000854F31 /* BlueProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573AB95125C35C4000854F31 /* BlueProgressView.swift */; };
 		577185B025C4FA3E000E69E5 /* BlueButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577185AF25C4FA3E000E69E5 /* BlueButtonStyle.swift */; };
 		577185B525C503E3000E69E5 /* MatchDayNumberTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577185B425C503E3000E69E5 /* MatchDayNumberTextView.swift */; };
+		5787812525C74F60002A863E /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787812425C74F60002A863E /* Modifiers.swift */; };
+		5787812A25C74F9A002A863E /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787812925C74F9A002A863E /* DividerView.swift */; };
+		5787812F25C74FC1002A863E /* MatchDayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787812E25C74FC1002A863E /* MatchDayHeaderView.swift */; };
+		5787813425C750EF002A863E /* MatchDayMatchesScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787813325C750EF002A863E /* MatchDayMatchesScrollView.swift */; };
+		5787813925C755CC002A863E /* GroupMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787813825C755CC002A863E /* GroupMatch.swift */; };
+		5787813E25C75600002A863E /* MatchDay+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5787813D25C75600002A863E /* MatchDay+Extensions.swift */; };
 		57A59B9A25C098C300BF3946 /* PremierLeagueMatchesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */; };
 		57A59B9C25C098C300BF3946 /* MatchDayListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59B9B25C098C300BF3946 /* MatchDayListView.swift */; };
 		57A59B9E25C098C600BF3946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A59B9D25C098C600BF3946 /* Assets.xcassets */; };
@@ -20,10 +26,10 @@
 		57A59BCB25C09AC100BF3946 /* PLTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BCA25C09AC100BF3946 /* PLTeam.swift */; };
 		57A59BD025C0A89800BF3946 /* MatchDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BCF25C0A89800BF3946 /* MatchDay.swift */; };
 		57A59BDB25C0B77900BF3946 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BDA25C0B77900BF3946 /* EndPoint.swift */; };
-		57A59BE025C0CBE400BF3946 /* PLTeamsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BDF25C0CBE400BF3946 /* PLTeamsStore.swift */; };
+		57A59BE025C0CBE400BF3946 /* PLTeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BDF25C0CBE400BF3946 /* PLTeamsViewModel.swift */; };
 		57A59BE525C0DC5A00BF3946 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */; };
 		57A59BEA25C0DCB200BF3946 /* ModelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BE925C0DCB200BF3946 /* ModelLoader.swift */; };
-		57A59BEF25C0DDAF00BF3946 /* PLMatchDayStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BEE25C0DDAF00BF3946 /* PLMatchDayStore.swift */; };
+		57A59BEF25C0DDAF00BF3946 /* PLMatchDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59BEE25C0DDAF00BF3946 /* PLMatchDayViewModel.swift */; };
 		57A59C0025C0FD1B00BF3946 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 57A59BFF25C0FD1B00BF3946 /* SDWebImageSwiftUI */; };
 		57A59C0525C0FDA000BF3946 /* MatchDayListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */; };
 		57A59C0A25C0FE3F00BF3946 /* MatchDayScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */; };
@@ -57,6 +63,12 @@
 		573AB95125C35C4000854F31 /* BlueProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueProgressView.swift; sourceTree = "<group>"; };
 		577185AF25C4FA3E000E69E5 /* BlueButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonStyle.swift; sourceTree = "<group>"; };
 		577185B425C503E3000E69E5 /* MatchDayNumberTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayNumberTextView.swift; sourceTree = "<group>"; };
+		5787812425C74F60002A863E /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		5787812925C74F9A002A863E /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		5787812E25C74FC1002A863E /* MatchDayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayHeaderView.swift; sourceTree = "<group>"; };
+		5787813325C750EF002A863E /* MatchDayMatchesScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayMatchesScrollView.swift; sourceTree = "<group>"; };
+		5787813825C755CC002A863E /* GroupMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMatch.swift; sourceTree = "<group>"; };
+		5787813D25C75600002A863E /* MatchDay+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchDay+Extensions.swift"; sourceTree = "<group>"; };
 		57A59B9625C098C300BF3946 /* PremierLeagueMatches.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PremierLeagueMatches.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueMatchesApp.swift; sourceTree = "<group>"; };
 		57A59B9B25C098C300BF3946 /* MatchDayListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayListView.swift; sourceTree = "<group>"; };
@@ -72,10 +84,10 @@
 		57A59BCA25C09AC100BF3946 /* PLTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTeam.swift; sourceTree = "<group>"; };
 		57A59BCF25C0A89800BF3946 /* MatchDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDay.swift; sourceTree = "<group>"; };
 		57A59BDA25C0B77900BF3946 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		57A59BDF25C0CBE400BF3946 /* PLTeamsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTeamsStore.swift; sourceTree = "<group>"; };
+		57A59BDF25C0CBE400BF3946 /* PLTeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLTeamsViewModel.swift; sourceTree = "<group>"; };
 		57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		57A59BE925C0DCB200BF3946 /* ModelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLoader.swift; sourceTree = "<group>"; };
-		57A59BEE25C0DDAF00BF3946 /* PLMatchDayStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLMatchDayStore.swift; sourceTree = "<group>"; };
+		57A59BEE25C0DDAF00BF3946 /* PLMatchDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLMatchDayViewModel.swift; sourceTree = "<group>"; };
 		57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayListHeaderView.swift; sourceTree = "<group>"; };
 		57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDayScoreView.swift; sourceTree = "<group>"; };
 		57A59C1425C1265400BF3946 /* SVGImageSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGImageSupport.swift; sourceTree = "<group>"; };
@@ -137,6 +149,7 @@
 			children = (
 				57A59B9925C098C300BF3946 /* PremierLeagueMatchesApp.swift */,
 				57A59C1F25C12CA000BF3946 /* Constants.swift */,
+				5787812425C74F60002A863E /* Modifiers.swift */,
 				57A59BD425C0ACB000BF3946 /* Model */,
 				57A59BF725C0EBCA00BF3946 /* View */,
 				57A59BF325C0EBC000BF3946 /* ViewModel */,
@@ -178,6 +191,8 @@
 			children = (
 				57A59BCA25C09AC100BF3946 /* PLTeam.swift */,
 				57A59BCF25C0A89800BF3946 /* MatchDay.swift */,
+				5787813D25C75600002A863E /* MatchDay+Extensions.swift */,
+				5787813825C755CC002A863E /* GroupMatch.swift */,
 				57A59BDA25C0B77900BF3946 /* EndPoint.swift */,
 				57A59BE925C0DCB200BF3946 /* ModelLoader.swift */,
 				57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */,
@@ -188,8 +203,8 @@
 		57A59BF325C0EBC000BF3946 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				57A59BDF25C0CBE400BF3946 /* PLTeamsStore.swift */,
-				57A59BEE25C0DDAF00BF3946 /* PLMatchDayStore.swift */,
+				57A59BDF25C0CBE400BF3946 /* PLTeamsViewModel.swift */,
+				57A59BEE25C0DDAF00BF3946 /* PLMatchDayViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				57A59B9B25C098C300BF3946 /* MatchDayListView.swift */,
+				5787813325C750EF002A863E /* MatchDayMatchesScrollView.swift */,
+				5787812E25C74FC1002A863E /* MatchDayHeaderView.swift */,
 				57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */,
 				57C0B17D25C646B600DBCAE1 /* MatchDayListNumbersScrollView.swift */,
 				577185B425C503E3000E69E5 /* MatchDayNumberTextView.swift */,
@@ -206,6 +223,7 @@
 				57F497B325C2816E00DD4246 /* MatchDayDetailView.swift */,
 				57F497B825C283C500DD4246 /* CloseButton.swift */,
 				573AB95125C35C4000854F31 /* BlueProgressView.swift */,
+				5787812925C74F9A002A863E /* DividerView.swift */,
 				577185AF25C4FA3E000E69E5 /* BlueButtonStyle.swift */,
 				57A59C1425C1265400BF3946 /* SVGImageSupport.swift */,
 			);
@@ -349,22 +367,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5787812A25C74F9A002A863E /* DividerView.swift in Sources */,
 				57F497B925C283C500DD4246 /* CloseButton.swift in Sources */,
 				577185B025C4FA3E000E69E5 /* BlueButtonStyle.swift in Sources */,
 				57A59C1525C1265400BF3946 /* SVGImageSupport.swift in Sources */,
+				5787812F25C74FC1002A863E /* MatchDayHeaderView.swift in Sources */,
 				57C0B17E25C646B600DBCAE1 /* MatchDayListNumbersScrollView.swift in Sources */,
 				57A59BD025C0A89800BF3946 /* MatchDay.swift in Sources */,
 				57A59BCB25C09AC100BF3946 /* PLTeam.swift in Sources */,
 				57A59C0525C0FDA000BF3946 /* MatchDayListHeaderView.swift in Sources */,
 				57F497B425C2816E00DD4246 /* MatchDayDetailView.swift in Sources */,
 				57A59BE525C0DC5A00BF3946 /* URLSession+Extension.swift in Sources */,
-				57A59BE025C0CBE400BF3946 /* PLTeamsStore.swift in Sources */,
+				57A59BE025C0CBE400BF3946 /* PLTeamsViewModel.swift in Sources */,
+				5787813425C750EF002A863E /* MatchDayMatchesScrollView.swift in Sources */,
 				57A59BEA25C0DCB200BF3946 /* ModelLoader.swift in Sources */,
+				5787813E25C75600002A863E /* MatchDay+Extensions.swift in Sources */,
 				57A59C2025C12CA000BF3946 /* Constants.swift in Sources */,
-				57A59BEF25C0DDAF00BF3946 /* PLMatchDayStore.swift in Sources */,
+				57A59BEF25C0DDAF00BF3946 /* PLMatchDayViewModel.swift in Sources */,
 				57A59BDB25C0B77900BF3946 /* EndPoint.swift in Sources */,
+				5787813925C755CC002A863E /* GroupMatch.swift in Sources */,
 				57A59B9C25C098C300BF3946 /* MatchDayListView.swift in Sources */,
 				573AB94D25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift in Sources */,
+				5787812525C74F60002A863E /* Modifiers.swift in Sources */,
 				57A59C0A25C0FE3F00BF3946 /* MatchDayScoreView.swift in Sources */,
 				577185B525C503E3000E69E5 /* MatchDayNumberTextView.swift in Sources */,
 				573AB95225C35C4000854F31 /* BlueProgressView.swift in Sources */,

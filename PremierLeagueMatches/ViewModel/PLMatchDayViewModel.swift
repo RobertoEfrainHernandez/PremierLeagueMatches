@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 import Combine
 
-class PLMatchDayStore: ObservableObject {
-  @Published var matches = [MatchDay.Match]()
+class PLMatchDayViewModel: ObservableObject {
+  @Published var groupMatches = [GroupMatch]()
   @Published var loading = false
   private var cancellables = Set<AnyCancellable>()
   private let modelLoader: ModelLoader<MatchDay>
@@ -32,8 +32,8 @@ class PLMatchDayStore: ObservableObject {
   /// This function calls the loadModel method from the ModelLoader struct to load all premier league matches on a particular match day number
   /// - Parameter matchDayNumber: Match Day Number
   func loadMatches(basedOn matchDayNumber: Int) {
-    if let matchDayMatches = matchDayCache["\(matchDayNumber)"]?.matches {
-      matches = matchDayMatches
+    if let matchDayMatches = matchDayCache["\(matchDayNumber)"]?.groupMatches() {
+      groupMatches = matchDayMatches
     } else {
       loading = true
       modelLoader
@@ -44,8 +44,9 @@ class PLMatchDayStore: ObservableObject {
             case .failure(let error): print(error)
           }
         }, receiveValue: { [self] matchDay in
-          matchDayCache.updateValue(matchDay, forKey: "\(matchDayNumber)")
-          matches = matchDayCache["\(matchDayNumber)"]!.matches.sorted()
+          let numStr = String(matchDayNumber)
+          matchDayCache.updateValue(matchDay, forKey: numStr)
+          groupMatches = matchDayCache[numStr]!.groupMatches()
           loading = false
         })
         .store(in: &cancellables)
