@@ -34,7 +34,7 @@ struct MatchDayScoreView: View {
       .padding(.horizontal)
       
       Text("Match Date: \(match.utcDateToString())")
-        .font(.footnote)
+        .font(.caption2)
         .foregroundColor(.white)
     }
   }
