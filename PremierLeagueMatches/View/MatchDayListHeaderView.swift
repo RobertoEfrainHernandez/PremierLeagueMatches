@@ -13,10 +13,7 @@ struct NumberModel: Identifiable {
 }
 
 struct MatchDayListHeaderView: View {
-  @ObservedObject var plMatchDayStore: PLMatchDayStore
-  @State private var numbers = (1...38).map { NumberModel(id: $0) }
-  @State private var currSelectedIndex = 0
-  
+  @Binding var currSelectedIndex: Int
   
   var body: some View {
     VStack {
@@ -29,32 +26,9 @@ struct MatchDayListHeaderView: View {
           .multilineTextAlignment(.leading)
         Spacer()
       }
-      .padding([.horizontal, .top])
-      
-      ScrollView(.horizontal) {
-        LazyHStack(alignment: .center, spacing: 16) {
-          ForEach(numbers.indices) { index in
-            MatchDayNumberTextView(numbers: $numbers, index: index) {
-              /*
-               Conditional for handling the selection of a Match Day and having the UI update and reflect those changes
-               */
-              if !numbers[index].isSelected {
-                numbers[currSelectedIndex].isSelected = false
-                currSelectedIndex = index
-                numbers[index].isSelected = true
-                plMatchDayStore.loadMatches(basedOn: numbers[index].id)
-              }
-            }
-          }
-          .offset(y: -10)
-        }
-        .frame(maxHeight: 100)
-        .padding(.horizontal)
-      }
+      .padding()
     }
-    .onAppear {
-      numbers[currSelectedIndex].isSelected = true
-    }
+    
   }
 }
 

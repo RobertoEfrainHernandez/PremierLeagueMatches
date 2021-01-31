@@ -45,7 +45,7 @@ class PLMatchDayStore: ObservableObject {
           }
         }, receiveValue: { [self] matchDay in
           matchDayCache.updateValue(matchDay, forKey: "\(matchDayNumber)")
-          matches = matchDayCache["\(matchDayNumber)"]!.matches
+          matches = matchDayCache["\(matchDayNumber)"]!.matches.sorted()
           loading = false
         })
         .store(in: &cancellables)
