@@ -7,19 +7,26 @@
 
 import SwiftUI
 
+struct MatchDayListStates {
+  var currSelectedIndex = 0
+  var show = false
+  var isDisabled = false
+  var selectedMatch: MatchDay.Match? = nil
+}
+
 struct MatchDayListView: View {
   @EnvironmentObject var plTeamsStore: PLTeamsStore
   @Environment(\.colorScheme) var colorScheme
   @StateObject private var plMatchDayStore = PLMatchDayStore()
   @Namespace var namespace
-  @State private var selectedMatch: MatchDay.Match? = nil
-  @State private var show = false
-  @State private var isDisabled = false
+  @State private var matchDayStates = MatchDayListStates()
   
   var body: some View {
     ZStack {
       VStack {
-        MatchDayListHeaderView(plMatchDayStore: plMatchDayStore)
+        MatchDayListHeaderView(currSelectedIndex: $matchDayStates.currSelectedIndex)
+        
+        MatchDayListNumbersScrollView(plMatchDayStore: plMatchDayStore, currSelectedIndex: $matchDayStates.currSelectedIndex)
         
         ScrollView {
           VStack(alignment: .center, spacing: 24) {
@@ -29,17 +36,17 @@ struct MatchDayListView: View {
             } else {
               ForEach(plMatchDayStore.matches) { match in
                 VStack {
-                  MatchedGeoMatchDayScoreView(show: $show, match: match, namespace: namespace)
+                  MatchedGeoMatchDayScoreView(show: $matchDayStates.show, match: match, namespace: namespace)
                     .onTapGesture {
                       withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
-                        show.toggle()
-                        selectedMatch = match
-                        isDisabled = true
+                        matchDayStates.show.toggle()
+                        matchDayStates.selectedMatch = match
+                        matchDayStates.isDisabled = true
                       }
                     }
-                    .disabled(isDisabled)
+                    .disabled(matchDayStates.isDisabled)
                 }
-                .matchedGeometryEffect(id: "container\(match.id)", in: namespace, isSource: !show)
+                .matchedGeometryEffect(id: "container\(match.id)", in: namespace, isSource: !matchDayStates.show)
               }
             }
           }
@@ -49,17 +56,17 @@ struct MatchDayListView: View {
       }
       .zIndex(1)
       
-      if selectedMatch != nil {
+      if matchDayStates.selectedMatch != nil {
         ZStack(alignment: .topTrailing) {
-          MatchDayDetailView(match: selectedMatch!, namespace: namespace)
+          MatchDayDetailView(match: matchDayStates.selectedMatch!, namespace: namespace)
           CloseButton()
             .padding(.trailing, 16)
             .onTapGesture {
               withAnimation(.spring(response: 0.5, dampingFraction: 0.7, blendDuration: 0)) {
-                show.toggle()
-                selectedMatch = nil
+                matchDayStates.show.toggle()
+                matchDayStates.selectedMatch = nil
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                  isDisabled = false
+                  matchDayStates.isDisabled = false
                 }
               }
             }

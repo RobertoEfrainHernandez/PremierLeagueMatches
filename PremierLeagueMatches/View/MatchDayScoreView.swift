@@ -16,19 +16,27 @@ struct MatchDayScoreView: View {
     let (homeTeam, awayTeam) = plTeamsStore.getHomeAwayTeamPair(with: "\(match.homeTeam.id)", and: "\(match.awayTeam.id)")
     let score = plTeamsStore.getFinalScore(with: match)
     
-    return HStack(alignment: .center) {
-      TeamCrestView(team: homeTeam)
-      Spacer()
+    return VStack(alignment: .center, spacing: 16) {
+      HStack(alignment: .center) {
+        TeamCrestView(team: homeTeam)
+        Spacer()
+        
+        Text(score)
+          .font(.title3)
+          .bold()
+          .foregroundColor(.white)
+          .multilineTextAlignment(.center)
+          .layoutPriority(1)
+        
+        Spacer()
+        TeamCrestView(team: awayTeam)
+      }
+      .padding(.horizontal)
       
-      Text(score)
-        .font(.title2)
-        .bold()
+      Text("Match Date: \(match.utcDateToString())")
+        .font(.footnote)
         .foregroundColor(.white)
-      
-      Spacer()
-      TeamCrestView(team: awayTeam)
     }
-    .padding(.horizontal)
   }
 }
 

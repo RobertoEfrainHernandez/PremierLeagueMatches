@@ -52,8 +52,13 @@ class PLTeamsStore: ObservableObject {
         let homeScore = match.score.fullTime.homeTeam
         let awayScore = match.score.fullTime.awayTeam
         return "\(homeScore ?? 0) - \(awayScore ?? 0)"
-      case .scheduled:
-        return "vs."
+      case .scheduled: return "vs."
+      case .live: return "Live Match"
+      case .inPlay: return "Match In Play"
+      case .paused: return "Match Paused"
+      case .postponed: return "Match Postponed"
+      case .suspended: return "Match Suspended"
+      case .canceled: return "Match Canceled"
     }
   }
 }
