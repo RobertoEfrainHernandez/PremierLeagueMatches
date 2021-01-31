@@ -44,9 +44,14 @@ class PLMatchDayViewModel: ObservableObject {
             case .failure(let error): print(error)
           }
         }, receiveValue: { [self] matchDay in
+<<<<<<< HEAD:PremierLeagueMatches/ViewModel/PLMatchDayViewModel.swift
           let numStr = String(matchDayNumber)
           matchDayCache.updateValue(matchDay, forKey: numStr)
           groupMatches = matchDayCache[numStr]!.groupMatches()
+=======
+          matchDayCache.updateValue(matchDay, forKey: "\(matchDayNumber)")
+          matches = matchDayCache["\(matchDayNumber)"]!.matches.sorted()
+>>>>>>> 9d535dce56d8086b8ca9a403c890c0fa2f19cfa8:PremierLeagueMatches/ViewModel/PLMatchDayStore.swift
           loading = false
         })
         .store(in: &cancellables)

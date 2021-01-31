@@ -371,7 +371,10 @@
 				57F497B925C283C500DD4246 /* CloseButton.swift in Sources */,
 				577185B025C4FA3E000E69E5 /* BlueButtonStyle.swift in Sources */,
 				57A59C1525C1265400BF3946 /* SVGImageSupport.swift in Sources */,
+<<<<<<< HEAD
 				5787812F25C74FC1002A863E /* MatchDayHeaderView.swift in Sources */,
+=======
+>>>>>>> 9d535dce56d8086b8ca9a403c890c0fa2f19cfa8
 				57C0B17E25C646B600DBCAE1 /* MatchDayListNumbersScrollView.swift in Sources */,
 				57A59BD025C0A89800BF3946 /* MatchDay.swift in Sources */,
 				57A59BCB25C09AC100BF3946 /* PLTeam.swift in Sources */,

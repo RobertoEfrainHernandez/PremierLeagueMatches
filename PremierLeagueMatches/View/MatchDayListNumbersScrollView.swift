@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct MatchDayListNumbersScrollView: View {
+<<<<<<< HEAD
   @ObservedObject var plMatchDayVM: PLMatchDayViewModel
+=======
+  @ObservedObject var plMatchDayStore: PLMatchDayStore
+>>>>>>> 9d535dce56d8086b8ca9a403c890c0fa2f19cfa8
   @State private var numbers = (1...38).map { NumberModel(id: $0) }
   @Binding var currSelectedIndex: Int
   
@@ -24,7 +28,11 @@ struct MatchDayListNumbersScrollView: View {
               numbers[currSelectedIndex].isSelected = false
               currSelectedIndex = index
               numbers[index].isSelected = true
+<<<<<<< HEAD
               plMatchDayVM.loadMatches(basedOn: numbers[index].id)
+=======
+              plMatchDayStore.loadMatches(basedOn: numbers[index].id)
+>>>>>>> 9d535dce56d8086b8ca9a403c890c0fa2f19cfa8
             }
           }
         }

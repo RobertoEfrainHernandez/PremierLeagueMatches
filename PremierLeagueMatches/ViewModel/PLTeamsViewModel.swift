@@ -55,12 +55,21 @@ class PLTeamsViewModel: ObservableObject {
         let awayScore = match.score.fullTime.awayTeam
         return "\(homeScore ?? 0) - \(awayScore ?? 0)"
       case .scheduled: return "vs."
+<<<<<<< HEAD:PremierLeagueMatches/ViewModel/PLTeamsViewModel.swift
       case .live: return "Live"
       case .inPlay: return "In Play"
       case .paused: return "Paused"
       case .postponed: return "Postponed"
       case .suspended: return "Suspended"
       case .canceled: return "Canceled"
+=======
+      case .live: return "Live Match"
+      case .inPlay: return "Match In Play"
+      case .paused: return "Match Paused"
+      case .postponed: return "Match Postponed"
+      case .suspended: return "Match Suspended"
+      case .canceled: return "Match Canceled"
+>>>>>>> 9d535dce56d8086b8ca9a403c890c0fa2f19cfa8:PremierLeagueMatches/ViewModel/PLTeamsStore.swift
     }
   }
 }
