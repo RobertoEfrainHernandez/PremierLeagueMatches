@@ -48,6 +48,19 @@ struct MatchDay: Decodable {
   }
 }
 
+enum MatchStatus: String, Decodable {
+  case finished = "FINISHED"
+  case scheduled = "SCHEDULED"
+  case live = "LIVE"
+  case inPlay = "IN_PLAY"
+  case paused = "PAUSED"
+  case postponed = "POSTPONED"
+  case suspended = "SUSPENDED"
+  case canceled = "CANCELED"
+}
+
+//MARK:- Extensions for MATCHDAY.MATCH
+
 extension MatchDay.Match {
   func utcDateToString(_ formatter: DateFormatter = DateFormatter()) -> String {
     formatter.locale = Locale(identifier: "en_US_POSIX")
@@ -79,15 +92,4 @@ extension MatchDay.Match: Comparable {
   static func == (lhs: MatchDay.Match, rhs: MatchDay.Match) -> Bool {
     lhs.id == rhs.id
   }
-}
-
-enum MatchStatus: String, Decodable {
-  case finished = "FINISHED"
-  case scheduled = "SCHEDULED"
-  case live = "LIVE"
-  case inPlay = "IN_PLAY"
-  case paused = "PAUSED"
-  case postponed = "POSTPONED"
-  case suspended = "SUSPENDED"
-  case canceled = "CANCELED"
 }
