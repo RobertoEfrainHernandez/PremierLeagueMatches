@@ -124,6 +124,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5717B75225CB3DF00081FC23 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				57F497B825C283C500DD4246 /* CloseButton.swift */,
+				573AB95125C35C4000854F31 /* BlueProgressView.swift */,
+				5787812925C74F9A002A863E /* DividerView.swift */,
+				577185AF25C4FA3E000E69E5 /* BlueButtonStyle.swift */,
+				57A59C1425C1265400BF3946 /* SVGImageSupport.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		5717B75625CB3E620081FC23 /* Matches Views */ = {
+			isa = PBXGroup;
+			children = (
+				5787813325C750EF002A863E /* MatchDayMatchesScrollView.swift */,
+				57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */,
+				5787812E25C74FC1002A863E /* MatchDayHeaderView.swift */,
+			);
+			path = "Matches Views";
+			sourceTree = "<group>";
+		};
+		5717B75A25CB3E940081FC23 /* MatchDay Header Views */ = {
+			isa = PBXGroup;
+			children = (
+				57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */,
+				57C0B17D25C646B600DBCAE1 /* MatchDayListNumbersScrollView.swift */,
+				577185B425C503E3000E69E5 /* MatchDayNumberTextView.swift */,
+			);
+			path = "MatchDay Header Views";
+			sourceTree = "<group>";
+		};
+		5717B75E25CB3EB20081FC23 /* Match Detail Views */ = {
+			isa = PBXGroup;
+			children = (
+				573AB94C25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift */,
+				57F497B325C2816E00DD4246 /* MatchDayDetailView.swift */,
+			);
+			path = "Match Detail Views";
+			sourceTree = "<group>";
+		};
+		5717B75F25CB3EDD0081FC23 /* Football-Data.org API */ = {
+			isa = PBXGroup;
+			children = (
+				57A59BDA25C0B77900BF3946 /* EndPoint.swift */,
+				57A59BE925C0DCB200BF3946 /* ModelLoader.swift */,
+				57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */,
+			);
+			path = "Football-Data.org API";
+			sourceTree = "<group>";
+		};
+		5717B76025CB3F170081FC23 /* PL Matches */ = {
+			isa = PBXGroup;
+			children = (
+				57A59BCF25C0A89800BF3946 /* MatchDay.swift */,
+				5787813D25C75600002A863E /* MatchDay+Extensions.swift */,
+				5787813825C755CC002A863E /* GroupMatch.swift */,
+			);
+			path = "PL Matches";
+			sourceTree = "<group>";
+		};
 		57A59B8D25C098C300BF3946 = {
 			isa = PBXGroup;
 			children = (
@@ -190,12 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				57A59BCA25C09AC100BF3946 /* PLTeam.swift */,
-				57A59BCF25C0A89800BF3946 /* MatchDay.swift */,
-				5787813D25C75600002A863E /* MatchDay+Extensions.swift */,
-				5787813825C755CC002A863E /* GroupMatch.swift */,
-				57A59BDA25C0B77900BF3946 /* EndPoint.swift */,
-				57A59BE925C0DCB200BF3946 /* ModelLoader.swift */,
-				57A59BE425C0DC5A00BF3946 /* URLSession+Extension.swift */,
+				5717B76025CB3F170081FC23 /* PL Matches */,
+				5717B75F25CB3EDD0081FC23 /* Football-Data.org API */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,19 +270,10 @@
 			isa = PBXGroup;
 			children = (
 				57A59B9B25C098C300BF3946 /* MatchDayListView.swift */,
-				5787813325C750EF002A863E /* MatchDayMatchesScrollView.swift */,
-				5787812E25C74FC1002A863E /* MatchDayHeaderView.swift */,
-				57A59C0425C0FDA000BF3946 /* MatchDayListHeaderView.swift */,
-				57C0B17D25C646B600DBCAE1 /* MatchDayListNumbersScrollView.swift */,
-				577185B425C503E3000E69E5 /* MatchDayNumberTextView.swift */,
-				57A59C0925C0FE3F00BF3946 /* MatchDayScoreView.swift */,
-				573AB94C25C35C0200854F31 /* MatchedGeoMatchDayScoreView.swift */,
-				57F497B325C2816E00DD4246 /* MatchDayDetailView.swift */,
-				57F497B825C283C500DD4246 /* CloseButton.swift */,
-				573AB95125C35C4000854F31 /* BlueProgressView.swift */,
-				5787812925C74F9A002A863E /* DividerView.swift */,
-				577185AF25C4FA3E000E69E5 /* BlueButtonStyle.swift */,
-				57A59C1425C1265400BF3946 /* SVGImageSupport.swift */,
+				5717B75625CB3E620081FC23 /* Matches Views */,
+				5717B75A25CB3E940081FC23 /* MatchDay Header Views */,
+				5717B75E25CB3EB20081FC23 /* Match Detail Views */,
+				5717B75225CB3DF00081FC23 /* Custom Views */,
 			);
 			path = View;
 			sourceTree = "<group>";

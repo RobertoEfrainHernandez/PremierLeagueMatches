@@ -14,11 +14,13 @@ struct MatchDayHeaderView: View {
   var body: some View {
     HStack(alignment: .center, spacing: 10.0) {
       DividerView(color: color)
+      
       Text(title)
         .font(.headline)
         .bold()
         .foregroundColor(Color.primary)
         .customShadow(Color.primary, r1: 8, r2: 4)
+      
       DividerView(color: color)
     }
     .padding()

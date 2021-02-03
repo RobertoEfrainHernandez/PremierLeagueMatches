@@ -16,11 +16,7 @@ struct MatchDayScoreView: View {
     let (homeTeam, awayTeam) = plTeamsVM.getHomeAwayTeamPair(with: "\(match.homeTeam.id)", and: "\(match.awayTeam.id)")
     let score = plTeamsVM.getFinalScore(with: match)
     
-<<<<<<< HEAD
     return VStack(alignment: .center, spacing: 24) {
-=======
-    return VStack(alignment: .center, spacing: 16) {
->>>>>>> 9d535dce56d8086b8ca9a403c890c0fa2f19cfa8
       HStack(alignment: .center) {
         TeamCrestView(team: homeTeam)
         Spacer()
@@ -37,11 +33,7 @@ struct MatchDayScoreView: View {
       }
       .padding(.horizontal)
       
-<<<<<<< HEAD
       Text("Match Scheduled for: \(match.utcDateToTime())")
-=======
-      Text("Match Date: \(match.utcDateToString())")
->>>>>>> 9d535dce56d8086b8ca9a403c890c0fa2f19cfa8
         .font(.caption2)
         .foregroundColor(.white)
     }
